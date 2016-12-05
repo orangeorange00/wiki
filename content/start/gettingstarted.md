@@ -54,6 +54,8 @@ For more information, `simiki -h` or have a look at [Simiki.org](http://simiki.o
 
 ## Others ##
 
+* [markdown syntax](https://daringfireball.net/projects/markdown/syntax#philosophy)
+
 * [simiki.org](http://simiki.org)
 * <https://github.com/tankywoo/simiki>
 * Email: <me@tankywoo.com>
