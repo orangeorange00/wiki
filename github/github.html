@@ -77,6 +77,7 @@
 <p>$ git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</p>
 <p>$ git push origin master #将本地的master分支推送到origin主机的master分支。如果后者不存在，则会被新建。</p>
 <p>$ git push origin :master #删除origin主机的master分支。</p>
+<p>$ git push -u origin master #令行中的-u参数，在推送成功后自动建立本地分支与远程版本库分支的追踪。</p>
 <p>$ git push --all origin #不管是否存在对应的远程分支，将本地的所有分支都推送到远程主机，这时需要使用--all选项。</p>
 <p>$ git push --force origin #如果远程主机的版本比本地版本更新，推送时Git会报错，要求先在本地做git pull合并差异，然后再推送到远程主机。这时，如果你一定要推送，可以使用--force选项。</p>
 <p>参考<a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html">http://www.ruanyifeng.com/blog/2014/06/git_remote.html</a>.Thank you so much.</p>
@@ -85,7 +86,7 @@
       <span>
         <p>Copyright © 2016 .
         Powered by <a href="http://simiki.org/" target="_blank">Simiki</a>.</p>
-        <p>Site Generated 2016-12-05 14:18:53</p>
+        <p>Site Generated 2016-12-05 16:01:05</p>
       </span>
     </div>
   </body>
