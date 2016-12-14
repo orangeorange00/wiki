@@ -38,8 +38,6 @@
    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<p>$$ evidence_{i}=\sum _{j}W_{ij}x_{j}+b_{i} $$</p>
-<p>其中，\( W_i \) 和 \( b_i \) 分别为类别 \( i \) 的权值和偏置。</p>
 <h1 id="_1">《数学之美》读书笔记</h1>
 <h2 id="chapter-1">chapter 1</h2>
 <p>文字、数字、语言之间的天然关系</p>
@@ -63,13 +61,13 @@
 <p>出发点：一个句子是否合理，就看它的可能性大小如何。</p>
 <p>假设S表示一个句子，由\(w_{1},w_{2},...,w_{n}\)组成。通常，N元模型：</p>
 <div class="hlcode"><pre><span class="n">P</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
-<span class="o">=</span> <span class="n">P</span><span class="p">(</span><span class="err">\\</span><span class="p">(</span><span class="n">w</span><span class="err">\</span><span class="n">_</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span><span class="n">w</span><span class="err">\</span><span class="n">_</span><span class="p">{</span><span class="mi">2</span><span class="p">},...,</span><span class="n">w</span><span class="err">\</span><span class="n">_</span><span class="p">{</span><span class="n">n</span><span class="p">}</span><span class="err">\\</span><span class="p">))</span>
-<span class="o">=</span> <span class="err">\\</span><span class="p">(</span><span class="n">P</span><span class="err">\</span><span class="n">left</span><span class="p">(</span> <span class="n">W_</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="err">\</span><span class="n">right</span><span class="p">)</span> <span class="err">\</span><span class="n">cdot</span> <span class="n">P</span><span class="err">\</span><span class="n">left</span><span class="p">(</span> <span class="n">W_</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="o">|</span><span class="n">W_</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="err">\</span><span class="n">right</span><span class="p">)</span> <span class="err">\</span><span class="n">cdot</span> <span class="n">P</span><span class="err">\</span><span class="n">left</span><span class="p">(</span> <span class="n">W_</span><span class="p">{</span><span class="mi">3</span><span class="p">}</span><span class="o">|</span><span class="n">W_</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span><span class="n">W_</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="err">\</span><span class="n">right</span><span class="p">)</span> <span class="err">\</span><span class="n">cdot</span> <span class="err">\</span><span class="n">cdot</span> <span class="n">P</span><span class="err">\</span><span class="n">left</span><span class="p">(</span> <span class="n">W_</span><span class="p">{</span><span class="n">n</span><span class="p">}</span><span class="o">|</span><span class="n">W_</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span><span class="n">W_</span><span class="p">{</span><span class="mi">2</span><span class="p">},</span><span class="err">\</span><span class="n">ldots</span> <span class="p">,</span><span class="n">W_</span><span class="p">{</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">}</span><span class="err">\</span><span class="n">right</span><span class="p">)</span> <span class="err">\\</span><span class="p">)</span>
+<span class="o">=</span> <span class="n">P</span><span class="p">(</span><span class="o">&lt;</span><span class="n">img</span> <span class="n">src</span><span class="o">=</span><span class="s">&quot;http://chart.googleapis.com/chart?cht=tx&amp;chl= w\_{1},w\_{2},...,w\_{n}&quot;</span> <span class="n">style</span><span class="o">=</span><span class="s">&quot;border:none;&quot;</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="o">=</span> <span class="o">&lt;</span><span class="n">img</span> <span class="n">src</span><span class="o">=</span><span class="s">&quot;http://chart.googleapis.com/chart?cht=tx&amp;chl= \left( W_{1}</span><span class="se">\r</span><span class="s">ight) \cdot P\left( W_{2}|W_{1}</span><span class="se">\r</span><span class="s">ight) \cdot P\left( W_{3}|W_{1},W_{2}</span><span class="se">\r</span><span class="s">ight) \cdot \cdot P\left( W_{n}|W_{1},W_{2},\ldots ,W_{n-1}</span><span class="se">\r</span><span class="s">ight)&quot;</span> <span class="n">style</span><span class="o">=</span><span class="s">&quot;border:none;&quot;</span><span class="o">&gt;</span>
 </pre></div>
 
 
 <p>简化，马尔可夫假设，二元模型（bigram model）</p>
-<div class="hlcode"><pre><span class="n">P</span><span class="p">(</span><span class="n">S</span><span class="p">)</span> <span class="o">=</span> <span class="err">\\</span><span class="p">(</span><span class="n">P</span><span class="err">\</span><span class="n">left</span><span class="p">(</span> <span class="n">W_</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="err">\</span><span class="n">right</span><span class="p">)</span> <span class="err">\</span><span class="n">cdot</span> <span class="n">P</span><span class="err">\</span><span class="n">left</span><span class="p">(</span> <span class="n">W_</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="o">|</span><span class="n">W_</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="err">\</span><span class="n">right</span><span class="p">)</span> <span class="err">\</span><span class="n">cdot</span> <span class="n">P</span><span class="err">\</span><span class="n">left</span><span class="p">(</span> <span class="n">W_</span><span class="p">{</span><span class="mi">3</span><span class="p">}</span><span class="o">|</span><span class="n">W_</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="err">\</span><span class="n">right</span><span class="p">)</span> <span class="err">\</span><span class="n">ldots</span> <span class="n">P</span><span class="err">\</span><span class="n">left</span><span class="p">(</span> <span class="n">W_</span><span class="p">{</span><span class="n">n</span><span class="p">}</span><span class="o">|</span><span class="n">W_</span><span class="p">{</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">}</span><span class="err">\</span><span class="n">right</span><span class="p">)</span><span class="err">\\</span><span class="p">)</span>
+<div class="hlcode"><pre><span class="n">P</span><span class="p">(</span><span class="n">S</span><span class="p">)</span> <span class="o">=</span> <span class="n">rc</span><span class="o">=</span><span class="s">&quot;http://chart.googleapis.com/chart?cht=tx&amp;chl= P\left( W_{1}</span><span class="se">\r</span><span class="s">ight) \cdot P\left( W_{2}|W_{1}</span><span class="se">\r</span><span class="s">ight) \cdot P\left( W_{3}|W_{2}</span><span class="se">\r</span><span class="s">ight) \ldots P\left( W_{n}|W_{n-1}</span><span class="se">\r</span><span class="s">ight)&quot;</span> <span class="n">style</span><span class="o">=</span><span class="s">&quot;border:none;&quot;</span><span class="o">&gt;</span>
 </pre></div>
 
 
@@ -78,9 +76,7 @@
 <p>限制：长程的依赖性。上下文相关跨度大。</p>
 <p>对于小概率事件的训练，可以采用古德-图灵估计,折扣小部分概率给未看见的事件。</p>
 <p>对于出现r次的词语：</p>
-<p>$$ d_{r}=\left( r+1\right) \cdot N_{r+1} / N_{r} $$</p>
-<p>\(a+b\)</p>
-<p>$$ d_{i} $$</p>
+<p>$$r=d_{r}=\left( r+1\right) \cdot N_{r+1} / N_{r} $$</p>
 <p>对于语料的选取，训练数据最好与实际应用相符。而且，大量的易处理噪声可以预处理。</p>
 <p>Q:
 - 是否由分词的不同方式组成句子，然后比较可能性？</p>
@@ -92,7 +88,7 @@
       <span>
         <p>Copyright © 2016 .
         Powered by <a href="http://simiki.org/" target="_blank">Simiki</a>.</p>
-        <p>Site Generated 2016-12-14 04:26:05</p>
+        <p>Site Generated 2016-12-14 04:41:00</p>
       </span>
     </div>
   </body>
