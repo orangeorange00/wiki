@@ -43,6 +43,7 @@ lax 由markdown转网页 [http://www.jeyzhang.com/how-to-insert-equations-in-mar
 ```
 
 例子：
+(在本机实验时，均可以用，但是貌似在远程访问的情况下，第一种方法不能用，问题暂时不清楚，可能是这种方式不适合远程用？网页相关知识还在学习中)
 
 $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
 

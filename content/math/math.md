@@ -41,7 +41,7 @@ little knowlege:
 
 P(S)
 = <img src="http://chart.googleapis.com/chart?cht=tx&chl= P\left(w_{1},w_{2},...,w_{n}\right)" style="border:none;">
-= <img src="http://chart.googleapis.com/chart?cht=tx&chl= \left( W_{1}\right) \cdot P\left( W_{2}|W_{1}\right) \cdot P\left( W_{3}|W_{1},W_{2}\right) \cdot \cdot P\left( W_{n}|W_{1},W_{2},\ldots ,W_{n-1}\right)" style="border:none;">
+= <img src="http://chart.googleapis.com/chart?cht=tx&chl= P\left( W_{1}\right) \cdot P\left( W_{2}|W_{1}\right) \cdot P\left( W_{3}|W_{1},W_{2}\right) \cdot \cdot P\left( W_{n}|W_{1},W_{2},\ldots ,W_{n-1}\right)" style="border:none;">
 
 简化，马尔可夫假设，二元模型（bigram model）
 
@@ -58,13 +58,11 @@ P(S)
 
 对于出现r次的词语：
 
-
 $$r=d\_{r}=\left( r+1\right) \cdot N\_{r+1} / N\_{r} $$
 
 对于语料的选取，训练数据最好与实际应用相符。而且，大量的易处理噪声可以预处理。
 
 Q:
-
 - 是否由分词的不同方式组成句子，然后比较可能性？
 
 - 如何分割词语？
