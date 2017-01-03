@@ -10,6 +10,30 @@ date: 2016-12-13 19:42
 
 # usage of the wiki #
 
+## 开始 ##
+
+在content文件夹中修改好后，用
+
+```
+$simiki g
+```
+
+生成output代码。
+
+```
+$simiki p
+```
+
+预览。
+
+```
+$fab deploy
+```
+
+布局gh-pages分支。需要安装好相关动作，在deploy部分有链接。但是不知道为什么master分支不管用，可能需要修改，以后再调:-(。
+
+然后手动布局master分支。
+
 ## 公式 ##
 
 手写转lax [https://webdemo.myscript.com/views/math.html#](https://webdemo.myscript.com/views/math.html#)
