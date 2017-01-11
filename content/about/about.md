@@ -17,3 +17,5 @@ date: 2016-12-5 23:51
 
 知耻而后勇，加油↖(^ω^)↗
 
+交流：linlinoo@mail.ustc.edu.cn
+
