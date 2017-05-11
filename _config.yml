@@ -12,4 +12,4 @@ root: /wiki
 deploy:
  - type: git
    remote: origin
-   branch: gh-pages
+   branch: gh-pages 
